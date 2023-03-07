@@ -5,6 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static int floatposgrid_x           = 5;        /* float grid columns */
+static int floatposgrid_y           = 5;        /* float grid rows */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
@@ -31,14 +33,17 @@ static const Rule rules[] = {
 	 * { "firefox",  NULL,       NULL,       1 << 8,       0,           -1,        0  },
 	 *
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor    scratch key */
-	{ NULL,       NULL,   "scratchpad",   0,            1,           -1,       's' },
+	/* class      instance    title       tags mask     isfloating   floatpos   monitor    scratch key */
+	{ NULL,       NULL,   "splash",       0,            1,           NULL,      -1,        0 },
+        { NULL,       NULL,   "scratchpad",   0,            1,           NULL,      -1,       's' },
+        { "TelegramDesktop",   NULL,   NULL,  0,            1,           "0x 0y 35% 100%",      -1,       't' },
+
 };
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
