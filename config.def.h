@@ -77,7 +77,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,           spawn,          SHCMD("rofi -show run") },
         { MODKEY,                       XK_x,           spawn,          SHCMD("rofi -show drun -modi drun") },
-        { MODKEY,                       XK_v,           spawn,          SHCMD("rofi -modi 'clipboard:green clip print' -show clipboard -run-command '{cmd}'") },
+        { MODKEY,                       XK_v,           spawn,          SHCMD("rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'") },
         { 0,                            XK_Control_R,   spawn,          SHCMD("flameshot gui --clipboard") },
         { MODKEY,                       XK_grave,       togglescratch,  {.v = scratchpadcmd } },
         { MODKEY,                       XK_minus,       togglescratch,  {.v = telegram } },
@@ -117,17 +117,17 @@ static Key keys[] = {
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
-	/* click                event mask      button          function        argument */
+	/* click                event mask      button          function        argument 
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} }, 
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
-	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },*/
+	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
+	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
 };
 
