@@ -78,7 +78,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,           spawn,          SHCMD("rofi -show run") },
         { MODKEY,                       XK_x,           spawn,          SHCMD("rofi -show drun -modi drun") },
         { MODKEY,                       XK_v,           spawn,          SHCMD("rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'") },
-        { 0,                            XK_Control_R,   spawn,          SHCMD("flameshot gui --clipboard") },
+        { 0,                            XK_Menu,   	spawn,          SHCMD("flameshot gui --clipboard") },
         { MODKEY,                       XK_grave,       togglescratch,  {.v = scratchpadcmd } },
         { MODKEY,                       XK_minus,       togglescratch,  {.v = telegram } },
 	{ MODKEY|ShiftMask,             XK_Return, 	spawn,          {.v = termcmd } },
